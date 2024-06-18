@@ -1,0 +1,15 @@
+.header{
+    &__navigation{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__navigation__box{
+        &__item{
+            
+        }
+        &__item:not(:last-child){
+            margin-right: 40px;
+            
+        }
+    }
+}

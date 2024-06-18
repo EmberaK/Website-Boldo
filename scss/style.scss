@@ -1,0 +1,13 @@
+@use 'header';
+@use 'normalize';
+// 
+body{
+    font-family: 'Manrope', 'OpenSans';
+}
+.wrapper{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+a{
+    text-decoration: none;
+}
