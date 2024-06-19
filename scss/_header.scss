@@ -1,11 +1,42 @@
+@use 'mixins' ;
+@use 'variables';
 .header{
+    padding-top: 56px;
+    padding-bottom: 166px;
+    background-color: variables.$color-sector;
     &__navigation{
         display: flex;
         justify-content: space-between;
+        padding-bottom: 72px;
+        margin-right: 100px;
+        margin-left: 100px;
     }
+    &__navigation__logo{
+        display: flex;
+        gap: 12px;
+        color: variables.$color-primary;
+        @include mixins.style-font-logo;
+    }
+
     &__navigation__box{
+        display: flex;
+            flex-direction: row;
+            text-align: center;
+            align-items: center;
+
         &__item{
-            
+            @include mixins.style-font-menu-top;
+            text-transform: capitalize;
+            &:not(:last-child){
+                color: variables.$color-primary;
+            }
+            &--active{
+                color: variables.$color-sector;
+                background-color: variables.$color-primary;
+                padding: 8px 40px;
+                border: 1px solid transparent;
+                border-radius: 24px;
+            }
         }
         &__item:not(:last-child){
             margin-right: 40px;

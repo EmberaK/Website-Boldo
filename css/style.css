@@ -1,331 +1,472 @@
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+.header {
+  padding-top: 56px;
+  padding-bottom: 166px;
+  background-color: #0A2640;
+}
 .header__navigation {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 72px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+.header__navigation__logo {
+  display: flex;
+  gap: 12px;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.header__navigation__box {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+.header__navigation__box__item {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  text-transform: capitalize;
+}
+.header__navigation__box__item:not(:last-child) {
+  color: #ffffff;
+}
+.header__navigation__box__item--active {
+  color: #0A2640;
+  background-color: #ffffff;
+  padding: 8px 40px;
+  border: 1px solid transparent;
+  border-radius: 24px;
 }
 .header__navigation__box__item:not(:last-child) {
   margin-right: 40px;
 }
 
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+.story {
+  padding-bottom: 96px;
 }
 
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
-body {
-  margin: 0;
+.story__cards {
+  padding-bottom: 120px;
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
-main {
-  display: block;
+.numbers {
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+.numbers__content {
+  padding-bottom: 84px;
 }
 
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+.numbers {
+  background-color: #0A2640;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+.numbers__card__items {
+  display: flex;
+  justify-content: center;
+  gap: 142px;
 }
 
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
-a {
-  background-color: transparent;
+.numbers__card__item__heading {
+  font-family: "Manrope", sans-serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 56px;
+  color: #4FE9A4;
+  margin-bottom: 32px;
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+.numbers__card__item__pargraph {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #ffffff;
 }
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-  font-weight: bolder;
+.team {
+  padding-top: 96px;
+  padding-bottom: 126px;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+.team__information {
+  padding-bottom: 52px;
 }
 
-/**
- * Add the correct font size in all browsers.
- */
-small {
-  font-size: 80%;
+.team__cards {
+  display: flex;
+  justify-content: center;
+  gap: 51px;
 }
 
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+.team__card__image {
+  width: 300px;
+  height: 354px;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  object-fit: cover;
+  margin-bottom: 24px;
 }
 
-sub {
-  bottom: -0.25em;
+.team__card__name {
+  font-family: "Open Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 48px;
+  color: #000000;
+  margin-bottom: 12px;
 }
 
-sup {
-  top: -0.5em;
+.team__card__profession {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #777777;
 }
 
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
-img {
-  border-style: none;
+.values {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #0A2640;
 }
 
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+.values__content {
+  padding-bottom: 72px;
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-button,
-input { /* 1 */
-  overflow: visible;
+.values__cards {
+  margin-right: auto;
+  margin-left: auto;
+  width: 800px;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select { /* 1 */
-  text-transform: none;
+.values__card {
+  display: flex;
+  flex-direction: row;
+}
+.values__card:not(:last-child) {
+  padding-bottom: 72px;
 }
 
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
+.values__card__image {
+  margin-right: 50px;
+  height: 150px;
+  width: 150px;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  object-fit: cover;
 }
 
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+.values__card__description__heading {
+  margin-bottom: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 48px;
+  color: #ffffff;
 }
 
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+.values__card__description__paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #ffffff;
 }
 
-/**
- * Correct the padding in Firefox.
- */
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
+.footer {
+  padding-top: 124px;
+  padding-bottom: 117px;
 }
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+.footer__box {
+  padding-bottom: 184px;
 }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-  vertical-align: baseline;
+.footer__enterprise {
+  height: 391px;
+  width: 1200px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #0A2640;
+  background-image: url(../images/ellipse.png);
+  background-repeat: no-repeat;
+  background-position: right top;
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-textarea {
-  overflow: auto;
+.footer__enterprise__inner {
+  margin: 72px 242px;
 }
 
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+.footer__enterprise__inner__heading {
+  margin-bottom: 48px;
+  font-family: "Manrope", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 72px;
+  color: #ffffff;
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
+.footer__enterprise__inner__search {
+  display: flex;
+  justify-content: center;
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+.footer__enterprise__inner__search__input {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 12px 32px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  border: 2px solid transparent;
+  border-radius: 240px;
+  width: 370px;
+  margin-right: 24px;
 }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
+.footer__enterprise__inner__search__submit {
+  background-color: #4FE9A4;
+  padding: 16px 56px;
+  border: 2px solid transparent;
+  border-radius: 56px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #000000;
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+.footer__navigation {
+  display: flex;
+  justify-content: center;
 }
 
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-details {
-  display: block;
+.footer__navigation__social {
+  width: 479px;
+  padding-right: 179px;
 }
 
-/*
- * Add the correct display in all browsers.
- */
-summary {
-  display: list-item;
+.footer__logo {
+  font-family: "Manrope", sans-serif;
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 34px;
+  color: #0A2640;
+  margin-bottom: 44px;
 }
 
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
-template {
-  display: none;
+.footer__navigation__social__paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #777777;
+}
+.footer__navigation__social__paragraph:not(:last-child) {
+  margin-bottom: 64px;
 }
 
-/**
- * Add the correct display in IE 10.
- */
-[hidden] {
-  display: none;
+.footer__navigation__inner {
+  display: flex;
+  flex-direction: column;
+}
+.footer__navigation__inner:not(:last-child) {
+  padding-right: 96px;
+  width: 246px;
+}
+.footer__navigation__inner:last-child {
+  width: 200px;
 }
 
-body {
-  font-family: "Manrope", "OpenSans";
+.footer__navigation__inner__heading {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #000000;
+  margin-bottom: 32px;
 }
 
-.wrapper {
-  margin-right: 100px;
-  margin-left: 100px;
+.footer__navigation__inner__item {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #777777;
+}
+.footer__navigation__inner__item:not(:last-child) {
+  padding-bottom: 34px;
 }
 
 a {
   text-decoration: none;
+  display: inline-block;
+}
+
+.content {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content__paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.content__heading {
+  text-align: center;
+  color: #ffffff;
+}
+.content__heading:first-child {
+  font-family: "Manrope", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 84px;
+}
+.content__heading:not(:first-child) {
+  font-family: "Manrope", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 72px;
+}
+
+.content__paragraph:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.content__heading:not(:last-child:not(:first-child)) {
+  margin-bottom: 32px;
+}
+
+.information {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.information__paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #777777;
+}
+.information__paragraph:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.information__heading {
+  font-family: "Manrope", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 72px;
+  color: #000000;
+}
+.information__heading:not(:last-child:not(:first-child)) {
+  margin-bottom: 32px;
 }
 
 /*# sourceMappingURL=style.css.map */

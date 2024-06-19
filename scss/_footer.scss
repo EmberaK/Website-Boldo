@@ -1,0 +1,97 @@
+@use 'variables';
+@use 'mixins';
+
+.footer{
+    padding-top: 124px;
+    padding-bottom: 117px;
+}
+.footer__box{
+    padding-bottom: 184px;
+}
+.footer__enterprise{
+    height: 391px;
+    width: 1200px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: variables.$color-sector;
+    background-image: url(../images/ellipse.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+.footer__enterprise__inner{
+    margin: 72px 242px;
+}
+.footer__enterprise__inner__heading{
+    margin-bottom: 48px;
+    @include mixins.style-font-large-subheading;
+    color: variables.$color-primary;
+}
+.footer__enterprise__inner__search{
+    display: flex;
+    justify-content: center;
+}
+.footer__enterprise__inner__search__input{
+    background-color: variables.$color-primary;
+    color: variables.$color-secondary;
+    padding: 12px 32px;
+    @include mixins.style-font-small-paragraph;
+    border: 2px solid transparent;
+    border-radius: 240px;
+    width: 370px;
+    margin-right: 24px;
+}
+.footer__enterprise__inner__search__submit{
+    background-color: variables.$color-highlight;
+    padding: 16px 56px;
+    border: 2px solid transparent;
+    border-radius: 56px;
+    @include mixins.style-font-extra-small-paragraph;
+    color: variables.$color-secondary;
+}
+.footer__navigation{
+    display: flex;
+    justify-content: center;
+}
+.footer__navigation__social{
+    width: 479px;
+    padding-right: 179px;
+}
+.footer__logo{
+    @include mixins.style-logo-bottom;
+    color: variables.$color-sector;
+    margin-bottom: 44px;
+}
+.footer__navigation__social__paragraph{
+    @include mixins.style-font-ultra-small-paragraph;
+    color: variables.$color-neutral;
+    &:not(:last-child){
+        margin-bottom: 64px;
+    }
+}
+
+.footer__navigation__inner{
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child){
+        padding-right: 96px;
+        width: 246px;
+    }
+    &:last-child{
+        width: 200px;
+    }
+
+}
+.footer__navigation__inner__heading{
+    @include mixins.style-font-medium-subheading;
+    color: variables.$color-secondary;
+    margin-bottom: 32px;
+}
+.footer__navigation__inner__item{
+    @include mixins.style-font-small-paragraph;
+    color: variables.$color-neutral;
+    &:not(:last-child){
+        padding-bottom: 34px;
+    }
+}

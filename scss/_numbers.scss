@@ -1,0 +1,26 @@
+@use 'mixins' ;
+@use 'variables';
+.numbers{
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+.numbers__content{
+    padding-bottom: 84px;
+}
+.numbers{
+    background-color: variables.$color-sector;
+}
+.numbers__card__items{
+    display: flex;
+    justify-content: center;
+    gap: 142px;
+}
+.numbers__card__item__heading{
+    @include mixins.style-font-ultra-large;
+    color: variables.$color-highlight;
+    margin-bottom: 32px;
+}
+.numbers__card__item__pargraph{
+    @include mixins.style-font-medium-paragraph;
+    color: variables.$color-primary;
+}

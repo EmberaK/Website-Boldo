@@ -1,0 +1,40 @@
+@use 'variables';
+@use 'mixins' ;
+.values{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: variables.$color-sector;
+}
+.values__content{
+    padding-bottom: 72px;
+}
+.values__cards{
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
+
+}
+.values__card{
+    display: flex;
+    flex-direction: row;
+    &:not(:last-child){
+        padding-bottom: 72px;
+    }
+}
+.values__card__image{
+    margin-right: 50px;
+    height: 150px;
+    width: 150px;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    object-fit: cover;
+}
+.values__card__description__heading{
+    margin-bottom: 12px;
+    @include mixins.style-font-small-heading;
+    color: variables.$color-primary;
+}
+.values__card__description__paragraph{
+    @include mixins.style-font-small-paragraph;
+    color: variables.$color-primary;
+}

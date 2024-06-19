@@ -1,0 +1,31 @@
+@use 'mixins' ;
+@use 'variables';
+.team{
+    padding-top: 96px;
+    padding-bottom: 126px;
+}
+.team__information{
+    padding-bottom: 52px;
+}
+.team__cards{
+    display: flex;
+    justify-content: center;
+    gap: 51px;
+}
+.team__card__image{
+    width: 300px;
+    height: 354px;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    object-fit: cover;
+    margin-bottom: 24px;
+}
+.team__card__name{
+    @include mixins.style-font-small-heading;
+    color: variables.$color-secondary;
+    margin-bottom: 12px;
+}
+.team__card__profession{
+    @include mixins.style-font-small-paragraph;
+    color: variables.$color-neutral;
+}

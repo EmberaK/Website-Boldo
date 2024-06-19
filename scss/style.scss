@@ -1,13 +1,66 @@
+@use 'reset';
+@use 'mixins' ;
+@use 'variables';
 @use 'header';
-@use 'normalize';
-// 
-body{
-    font-family: 'Manrope', 'OpenSans';
-}
-.wrapper{
-    margin-right: 100px;
-    margin-left: 100px;
-}
+@use 'story';
+@use 'numbers';
+@use 'team';
+@use 'values';
+@use 'footer';
+// body{
+//     font-family:'OpenSans', 'Manrope', sans-serif;
+// }
 a{
     text-decoration: none;
+    display: inline-block;
+}
+.content{
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.content__paragraph{
+    @include mixins.style-font-small-paragraph;
+    text-align: center;
+    color: variables.$color-primary;
+}
+.content__heading{
+    text-align: center;
+    color: variables.$color-primary;
+    &:first-child{
+        @include mixins.style-font-extra-large-heading;
+    }
+    &:not(:first-child){
+        @include mixins.style-font-large-subheading;
+    }
+}
+.content__paragraph{
+    &:not(:last-child){
+        margin-bottom: 12px;
+}
+}
+.content__heading{
+    &:not(:last-child:not(:first-child)){
+        margin-bottom: 32px;
+    }
+}
+
+.information{
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.information__paragraph{
+    @include mixins.style-font-small-paragraph;
+    color: variables.$color-neutral;
+    &:not(:last-child){
+        margin-bottom: 12px;
+    }
+}
+.information__heading{
+    @include mixins.style-font-large-subheading;
+    color: variables.$color-secondary;
+    &:not(:last-child:not(:first-child)){
+        margin-bottom: 32px;
+    }
 }
