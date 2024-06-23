@@ -1,8 +1,38 @@
 @use 'mixins' ;
 @use 'variables';
 .story{
+    padding-top: calc(532px + 120px);
     padding-bottom: 96px;
 }
 .story__cards{
-    padding-bottom: 120px;
+    // padding-bottom: 120px;
+    position: relative;
+}
+.story_collage{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.story__card__small{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    &__image{
+        object-fit: cover;
+        min-width: 300px;
+        height: 296px;
+        border: 1px solid transparent;
+        border-radius: 24px;
+    }
+}
+.story__card__big__image{
+    object-fit: cover;
+    width: 400px;
+    height: 632px;
+    border: 1px solid transparent;
+    border-radius: 24px;
 }

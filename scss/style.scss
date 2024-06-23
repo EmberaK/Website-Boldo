@@ -7,9 +7,9 @@
 @use 'team';
 @use 'values';
 @use 'footer';
-// body{
-//     font-family:'OpenSans', 'Manrope', sans-serif;
-// }
+*{
+    box-sizing: border-box;
+}
 a{
     text-decoration: none;
     display: inline-block;

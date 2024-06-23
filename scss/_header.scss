@@ -4,16 +4,21 @@
     padding-top: 56px;
     padding-bottom: 166px;
     background-color: variables.$color-sector;
+    &__logo--image path{
+        fill: variables.$color-highlight;
+    }
     &__navigation{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         padding-bottom: 72px;
         margin-right: 100px;
         margin-left: 100px;
     }
     &__navigation__logo{
         display: flex;
+        align-items: center;
         gap: 12px;
+        padding-right: 610px;
         color: variables.$color-primary;
         @include mixins.style-font-logo;
     }

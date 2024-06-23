@@ -90,16 +90,21 @@ legend {
   padding-bottom: 166px;
   background-color: #0A2640;
 }
+.header__logo--image path {
+  fill: #4FE9A4;
+}
 .header__navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-bottom: 72px;
   margin-right: 100px;
   margin-left: 100px;
 }
 .header__navigation__logo {
   display: flex;
+  align-items: center;
   gap: 12px;
+  padding-right: 610px;
   color: #ffffff;
   font-family: "Manrope", sans-serif;
   font-size: 43px;
@@ -134,11 +139,43 @@ legend {
 }
 
 .story {
+  padding-top: 652px;
   padding-bottom: 96px;
 }
 
 .story__cards {
-  padding-bottom: 120px;
+  position: relative;
+}
+
+.story_collage {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.story__card__small {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.story__card__small__image {
+  object-fit: cover;
+  min-width: 300px;
+  height: 296px;
+  border: 1px solid transparent;
+  border-radius: 24px;
+}
+
+.story__card__big__image {
+  object-fit: cover;
+  width: 400px;
+  height: 632px;
+  border: 1px solid transparent;
+  border-radius: 24px;
 }
 
 .numbers {
@@ -352,6 +389,9 @@ legend {
   color: #0A2640;
   margin-bottom: 44px;
 }
+.footer__logo--image path {
+  fill: #0A2640;
+}
 
 .footer__navigation__social__paragraph {
   font-family: "Open Sans", sans-serif;
@@ -394,6 +434,10 @@ legend {
 }
 .footer__navigation__inner__item:not(:last-child) {
   padding-bottom: 34px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
